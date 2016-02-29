@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 			redirect_to @user,
 						notice: "Cadastro criado com sucesso!"
 		else
-			render action :new	
+			render action: :new	
 		end
 	end				
 end
