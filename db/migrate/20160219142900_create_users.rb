@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.text :bio
 
       t.index :email, unique: true
+      
       t.timestamps null: false
     end
   end
