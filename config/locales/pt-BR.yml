@@ -10,10 +10,31 @@ pt-BR:
       edit: "Editar perfil"
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
+  rooms:
+    attributes:
+      title: Título
+      location: Localização
+      description: Descrição
+    index:
+      title: "Cadastro de Quartos"
+      edit: Editar
+      show: "Vizualizar"
+      destroy: Remover
+      new: "Novo Quarto"
+    edit:
+      title: "Editar Quartos"  
+      show: "Vizualizar Quartos"
+    show:
+      title: "Título:"
+      location: "Localização:"
+      description: "Descrição:"
+      edit: "Editar Quartos"
+    new:
+      title: "Cadastro de Quartos"
   links:
     back: Voltar
   layout:
-    rooms: quartos
+    rooms: Quartos
     signup: Cadastro
   general:
     form_error: Há erros no formulário, por favor verifique.
@@ -24,7 +45,7 @@ pt-BR:
     attributes:
       user:
         bio: Biografia
-        email: email
+        email: Email
         full_name: Nome completo
         location: Localização
         password: Senha
