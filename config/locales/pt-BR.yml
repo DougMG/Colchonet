@@ -12,6 +12,10 @@ pt-BR:
       edit: "Editar perfil"
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
+  user_sessions:
+    new:
+      title: "Login"
+      sign_up: "Cadastre-se"
   rooms:
     attributes:
       title: Título
@@ -42,7 +46,7 @@ pt-BR:
            O Colcho.net é o lugar ideal para você alugar aquele quarto
            sobrando na sua casa  e ainda conhecer gente do mundo inteiro.
       confirm_link_html: "Para você começar a usar o site, acesso o link: %{link}"
-      thanks_html: "Obrigado por se cadastrar no %{link}."
+      thanks_html: "Obrigado por se cadastrar no %{link}."    
   links:
     back: Voltar
   layout:
@@ -72,6 +76,25 @@ pt-BR:
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: "Usuário ou senha inválidos"
+    flash:
+        notice:
+          signed_in: "Usuário logado!"
+
+  helpers:
+      submit:
+        create: "Criar %{model}"
+        submit: "Salvar %{model}"
+        update: "Atualizar %{model}"
+        user_session:
+          create: 'Entrar'
   date:
     abbr_day_names:
     - Dom
