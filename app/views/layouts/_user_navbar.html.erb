@@ -1,0 +1,12 @@
+<nav>
+  <u>
+    <li><%= link_to t("layout.new_room"), new_room_url %></li>
+    <li><%= link_to t("layout.rooms"), rooms_path %></li>
+    <li>
+      <%= link_to t("layout.my_profile"), user_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to t("layout.signout"), user_sessions_path, method: :delete %>
+    </li>
+  </u>
+</nav>
