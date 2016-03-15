@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_no_authentication, only: [:new, :create]
+  before_action :can_change, only: [:edit, :update]
 
 	def show
 		@user = User.find(params[:id])
@@ -36,5 +38,15 @@ class UsersController < ApplicationController
 	private
 	def user_params
 		params.require(:user).permit(:full_name, :email, :location, :password, :password_confirmation, :bio)			
-	end		
+	end
+
+	def can_chance
+		unless user_signed_in? && current_user == user
+			redirect_to user_path(params[:id])
+		end
+	end
+
+	def user
+		@user ||= User.find(params[:id])
+	end
 end
