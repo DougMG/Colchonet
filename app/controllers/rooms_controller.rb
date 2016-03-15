@@ -36,7 +36,9 @@ class RoomsController < ApplicationController
   # PATCH/PUT /rooms/1
   # PATCH/PUT /rooms/1.json
   def update
-      if @room.update(room_params)
+      @room = current_user.rooms.find(params[:id])
+
+      if @room.update(params[:room])
         redirect_to @room, notice: t("flash.notice.room_updated")
       else
         render :edit
