@@ -15,18 +15,24 @@ pt-BR:
   user_sessions:
     new:
       title: "Login"
-      sign_up: "Cadastre-se"
+      sign_up: "Cadastre-se"  
+  dialogs:
+    destroy: "Você tem certeza que quer remover?"    
   rooms:
     attributes:
       title: Título
       location: Localização
       description: Descrição
     index:
-      title: "Cadastro de Quartos"
+      title: "Quartos disponíveis"
       edit: Editar
       show: "Vizualizar"
       destroy: Remover
       new: "Novo Quarto"
+    room:
+      owner_html: "&mdash; %{owner} (%{when})"  
+      edit: "Editar"
+      destroy: "Remover"
     edit:
       title: "Editar Quartos"  
       show: "Vizualizar Quartos"

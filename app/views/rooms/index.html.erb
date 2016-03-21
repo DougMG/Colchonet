@@ -1,6 +1,8 @@
 
 <h1><%= t ".title" %></h1>
-    <%= render @room %>
+	<% @rooms.each do |room| %>
+    	<%= render room %>
+	<% end %>
 <br>
 
 <%= link_to t(".new"), new_room_path %>

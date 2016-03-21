@@ -5,4 +5,8 @@ class Room < ActiveRecord::Base
 	def complete_name
 		"#{title}, #{location}"
 	end
+
+	def most_recent
+    	Room.all
+  	end
 end

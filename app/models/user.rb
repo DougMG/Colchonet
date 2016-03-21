@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
 	before_create do |user|
 		user.confirmation_token = SecureRandom.urlsafe_base64
-  end
+  	end
 
   scope :confirmed, -> {where.not(confirmed_at: nil)}
 

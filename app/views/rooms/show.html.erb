@@ -1,17 +1,18 @@
 
-  <strong><%= t ".title"%></strong>
+ <!-- <strong><%#= t ".title"%></strong>
   <%= @room.title %>
 </p>
 
 <p>
-  <strong><%= t ".location"%></strong>
+  <strong><%#= t ".location"%></strong>
   <%= @room.location %>
 </p>
 
 <p>
-  <strong><%= t ".description" %></strong>
+  <strong><%#= t ".description" %></strong>
   <%= @room.description %>
-</p>
+</p> -->
+<%= render @room %>
 
-<%= link_to t(".edit"), edit_room_path(@room) %> |
-<%= link_to t("links.back"), rooms_path %>
+<%#= link_to t(".edit"), edit_room_path(@room) %> 
+<%#= link_to t("links.back"), rooms_path %>
