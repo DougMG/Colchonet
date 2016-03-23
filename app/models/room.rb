@@ -1,5 +1,5 @@
 class Room < ActiveRecord::Base
-	has_many :reviews
+	has_many :reviews, dependent: :destroy
 	has_many :reviewed_rooms, through: :reviews, source: :room
 	belongs_to :user
 	validates_presence_of :title, :location, :description
