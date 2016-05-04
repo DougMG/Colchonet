@@ -14,7 +14,8 @@ class User < ActiveRecord::Base
 		user.confirmation_token = SecureRandom.urlsafe_base64
   	end
 
-  scope :confirmed, -> {where.not(confirmed_at: nil)}
+  scope :confirmed, -> { where.not(confirmed_at: nil) }
+  scope :most_recent, -> { order('created_at DESC') }
 
 	def confirm!
 		return if confirmed?

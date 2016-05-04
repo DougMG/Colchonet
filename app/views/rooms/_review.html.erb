@@ -1,0 +1,5 @@
+<section class="review">
+	<% if belogons_to_user(room) %>
+		<%= render partial: 'review_form', locals: {room: room} %>
+	<% end %>
+</section>
