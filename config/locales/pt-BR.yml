@@ -34,7 +34,11 @@ pt-BR:
       edit: "Editar"
       destroy: "Remover"
     review:
-      login_to_review: Faça o login para avaliar quartos  
+      login_to_review: Faça o login para avaliar quartos
+    review:
+      stats:
+        one: '(1 avaliações)'
+        other: '(%{count} avaliações)'  
     edit:
       title: "Editar Quartos"  
       show: "Vizualizar Quartos"

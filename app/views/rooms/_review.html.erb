@@ -1,5 +1,14 @@
 <section class="review">
-	<% if belogons_to_user(room) %>
+	<% if room.show_form? %>	
 		<%= render partial: 'review_form', locals: {room: room} %>
+	<% else %>	
+		<% room.stars.times do %>
+			<span class="star filled_star"></span>
+		<% end %>
+
+		<% (room.review_points.max - room.stars).times do %>
+			<span class "star empty_star"></star>
+		<% end %>
+		<%= t '.stats', count: room.total_reviews %>
 	<% end %>
 </section>

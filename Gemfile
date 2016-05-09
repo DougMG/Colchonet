@@ -29,6 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use I18n internazionalization
 gem 'rails-i18n'
 
+# Use font-awesome-rails
+gem "font-awesome-rails"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
