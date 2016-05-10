@@ -47,3 +47,28 @@
 	color: #aaa;
 	&:before { content: "\f006"; }
 }
+
+#content .review {
+	margin: 0;
+	padding: 0;
+	float: right;
+	border: none;
+	position: relative;
+}
+
+.review .icon-ok,
+.review .icon-remove {
+	position: absolute;
+	right: 0;
+}
+
+.review label i {
+	font-size: 18px;
+	text-shadow: 1px 1px #999;
+	cursor: pointer;
+	color: #ccc;
+}
+
+.review form > input {
+	display: none;
+}

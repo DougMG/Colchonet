@@ -10,6 +10,10 @@ class RoomPresenter
 		@room = room
 		@show_form = show_form
 	end
+
+	def can_review?
+		@context.user_signed_in?
+	end
 	
 	def show_form?
 		@show_form
